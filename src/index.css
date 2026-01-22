@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+
+
+/* spotlight glow */
+.spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    250px circle at var(--x) var(--y),
+    rgba(255, 255, 255, 0.25),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.group:hover .spotlight {
+  opacity: 1;
+}
+
+/* glass card base */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* glow pulse */
+.glow-hover {
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+}
+.group:hover .glow-hover {
+  box-shadow: 0 0 35px rgba(236, 72, 153, 0.6);
+}
+
+
+
+/* === Animated Gradient Border === */
+.gradient-border {
+  position: relative;
+  border-radius: 16px;
+  padding: 1.5px;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    #ec4899,
+    #a855f7,
+    #3b82f6,
+    #ec4899
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 6s linear infinite;
+  filter: blur(6px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.group:hover .gradient-border::before {
+  opacity: 1;
+  filter: blur(10px);
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* icon glow on card hover */
+.icon-glow {
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 0 0 rgba(255,255,255,0));
+}
+
+.group:hover .icon-glow {
+  color: #ec4899; /* pink glow tone */
+  filter:
+    drop-shadow(0 0 6px rgba(236,72,153,0.6))
+    drop-shadow(0 0 14px rgba(236,72,153,0.5))
+    drop-shadow(0 0 28px rgba(236,72,153,0.4));
+}
+
+.group:hover .icon-glow {
+  transform: translateY(-4px);
+}
+
+
+/* base icon glow */
+.icon-glow {
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 0 0 rgba(0,0,0,0));
+}
+
+/* PINK */
+.group:hover .icon-pink {
+  color: #ec4899;
+  filter:
+    drop-shadow(0 0 6px rgba(236,72,153,0.6))
+    drop-shadow(0 0 14px rgba(236,72,153,0.5))
+    drop-shadow(0 0 28px rgba(236,72,153,0.4));
+}
+
+/* PURPLE */
+.group:hover .icon-purple {
+  color: #a855f7;
+  filter:
+    drop-shadow(0 0 6px rgba(168,85,247,0.6))
+    drop-shadow(0 0 14px rgba(168,85,247,0.5))
+    drop-shadow(0 0 28px rgba(168,85,247,0.4));
+}
+
+/* BLUE */
+.group:hover .icon-blue {
+  color: #3b82f6;
+  filter:
+    drop-shadow(0 0 6px rgba(59,130,246,0.6))
+    drop-shadow(0 0 14px rgba(59,130,246,0.5))
+    drop-shadow(0 0 28px rgba(59,130,246,0.4));
+}
+
+/* ROSE */
+.group:hover .icon-rose {
+  color: #fb7185;
+  filter:
+    drop-shadow(0 0 6px rgba(251,113,133,0.6))
+    drop-shadow(0 0 14px rgba(251,113,133,0.5))
+    drop-shadow(0 0 28px rgba(251,113,133,0.4));
+}
+
+/* ===== Who We Are – Learn More Button ===== */
+.who-we-are .btn-shine {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.who-we-are .btn-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.who-we-are .btn-shine:hover::before {
+  left: 120%;
+}
+
+.who-we-are .btn-shine:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 30px rgba(236, 72, 153, 0.35),
+    0 0 20px rgba(168, 85, 247, 0.35);
+}
+
+
+
+
+
+
