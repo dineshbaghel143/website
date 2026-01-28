@@ -178,6 +178,67 @@
 
 
 
+                                   /*Service Page */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-bg {
+  background: linear-gradient(
+    -45deg,
+    #12001f,
+    #2a0638,
+    #1a0030,
+    #3b0a52
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+
+
+
+
+/* INDUSTRY DOT */
+.industry-dot .dot {
+  background: white;
+  transition: all 0.3s ease;
+}
+
+/* ACTIVE DOT */
+.industry-active .dot {
+  background: #ec4899;
+  box-shadow:
+    0 0 6px rgba(236,72,153,0.7),
+    0 0 14px rgba(236,72,153,0.6);
+}
+
+/* NEON CURVE */
+.industry-path {
+  filter: drop-shadow(0 0 6px rgba(168,85,247,0.4))
+          drop-shadow(0 0 14px rgba(236,72,153,0.35));
+}
+
+
+.industry-curve {
+  filter:
+    drop-shadow(0 0 6px rgba(168,85,247,0.4))
+    drop-shadow(0 0 14px rgba(236,72,153,0.35));
+}
+
+svg path {
+  filter:
+    drop-shadow(0 0 6px rgba(168,85,247,0.35))
+    drop-shadow(0 0 14px rgba(255,148,210,0.25));
+}
+
+
+
+
+
+
 
 
 

@@ -20,7 +20,7 @@ const cards = [
     title: "100+ Projects",
     subtitle: "Delivered across industries globally",
     icon: <FaFolderOpen size={28} />,
-    iconColor: "icon-purple",
+    iconColor: "icon-blue",
     baseTransform: "rotateX(0deg) rotateY(20deg)",
     offset: "-translate-y-6",
   },

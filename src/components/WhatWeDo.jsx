@@ -210,7 +210,7 @@ const WhatWeDo = () => {
       {/* CARDS */}
       <div
         ref={pinRef}
-        className="wwd-wrapper min-h-[60vh] flex items-center overflow-hidden"
+        className="wwd-wrapper min-h-[50vh] flex items-center overflow-hidden"
       >
         <div
           className="wwd-track flex gap-8 px-20"
